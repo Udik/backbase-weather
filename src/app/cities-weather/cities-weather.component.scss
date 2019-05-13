@@ -1,0 +1,21 @@
+.cardsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+    app-city-card {
+        width: 20%;
+    }
+}
+
+
+
+@media(max-width: 800px) {
+    .cardsContainer {
+        flex-direction: column;
+
+        app-city-card {
+            width: 100%;
+        }
+    }
+}

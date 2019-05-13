@@ -1,0 +1,8 @@
+<div *ngIf="cityForecast">
+    <a mat-button class="homeNavigation" (click)="backClicked()">
+        <mat-icon>arrow_back_ios</mat-icon>
+        Back
+    </a>
+  <app-city-card [cityWeather]="cityWeather"></app-city-card>
+  <app-cities-forecast [cityForecast]="cityForecast"></app-cities-forecast>
+</div>

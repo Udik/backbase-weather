@@ -1,0 +1,35 @@
+.cityCard {
+    background: linear-gradient(to bottom, #cadeea 0%, #c5d6e0 47%, #9ac0cc 100%);
+    margin-right: 4px;
+    color: #fff;
+    text-shadow: 0px 2px 3px #000000;
+    height: 100%;
+
+    &.selected {
+        background: #7fc5e0;
+    }
+
+    .description {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+}
+
+fa-icon {
+    width: 28px;
+    margin-right: 12px;
+    display: inline-block;
+    text-align: right;
+    color: #fff;
+}
+
+@media(max-width: 800px) {
+    .cardsContainer {
+        flex-direction: column;
+    }
+
+    .cityCard {
+        width: initial;
+        margin-bottom: 12px;
+    }
+}

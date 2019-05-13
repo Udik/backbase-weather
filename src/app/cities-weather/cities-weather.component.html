@@ -1,0 +1,7 @@
+<div class="cardsContainer">
+    <app-city-card *ngFor="let cw of cityWeathers; index as i"
+                   [cityWeather]="cw"
+                   [selected]="currentTab === i"
+                   (click)="switchTab(i)">
+    </app-city-card>
+</div>

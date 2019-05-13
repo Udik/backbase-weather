@@ -1,0 +1,30 @@
+<div class="forecastComponent">
+    <table>
+        <ng-container *ngFor="let f of cityForecast.forecastPeriods | slice:0:16; index as i">
+            <tr class="date"
+                *ngIf="i === 0 || (f.dateTime | date:'d' ) !== (cityForecast.forecastPeriods[i-1].dateTime | date:'d')">
+                <td colspan="4">
+                    {{ f.dateTime | date }}
+                </td>
+            </tr>
+            <tr class="forecastPeriod">
+                <td>
+                    {{ f.dateTime | date:'shortTime' }}
+                </td>
+                <td class="weather">
+                    <app-weather-icon [iconCode]="f.weatherIcon"
+                                      [desc]="f.weatherDescription"
+                                      size="32">
+                    </app-weather-icon>
+                    <span class="weatherDesc"> {{ f.weatherDescription | titlecase }} </span>
+                </td>
+                <td>
+                    {{ f.avgTemp | number:'1.0-1' }} &#8451;
+                </td>
+                <td>
+                    {{ f.windSpeed | number:'1.0-1' }} km/h
+                </td>
+            </tr>
+        </ng-container>
+    </table>
+</div>

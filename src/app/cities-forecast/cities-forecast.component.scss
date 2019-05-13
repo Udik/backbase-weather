@@ -1,0 +1,49 @@
+table {
+    text-align: left;
+    width:100%;
+    color: #fff;
+    text-align: center;
+
+    tr {
+        width: 100%;
+
+        >td {
+            padding:12px 12px;
+        }
+
+        &.date {
+            padding: 6px;
+        }
+
+        &.forecastPeriod {
+            height: 48px;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+            background-color: #fafafa33;
+
+            .weather {
+                .weatherDesc {
+                    white-space: nowrap;
+
+                    @media(max-width: 1000px) {
+                        display: block;
+                    }
+                }
+            }
+
+            app-weather-icon {
+                position: relative;
+                top:7px;
+            }
+
+            &:nth-child(odd) {
+                background-color: #fff3;
+            }
+
+            >td {
+                width: 20%;
+                padding:6px 12px;
+            }
+        }
+    }
+}

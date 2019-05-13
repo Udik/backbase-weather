@@ -1,0 +1,19 @@
+<mat-toolbar color="primary"
+             class="toolbar">
+
+    <img src="/assets/img/logo.png">
+    <h1> {{ title }}</h1>
+</mat-toolbar>
+
+<div class="appbody">
+
+    <div id="loader"
+         class="myloader"
+         *ngIf="loading">
+        <app-spinner></app-spinner>
+    </div>
+
+    <div [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+</div>

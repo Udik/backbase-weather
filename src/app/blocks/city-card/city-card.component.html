@@ -1,0 +1,19 @@
+<mat-card class="cityCard" 
+          [ngClass]="{ selected: selected }"
+          (click)="clicked()"
+          >
+  <mat-card-title>{{ cityWeather.cityName }}</mat-card-title>
+  <mat-card-content>
+    <ul class="innerlist">
+      <li>
+        <app-weather-icon [iconCode]="cityWeather.weatherIcon"
+                          [desc]="cityWeather.weatherDescription">
+        </app-weather-icon>
+        <span class="description"> {{ cityWeather.weatherDescription | titlecase }} </span>
+      </li>
+      <li class="padtop"><fa-icon [icon]="faThermometer"></fa-icon> {{ cityWeather.avgTemp | number:'1.0-1' }} &#8451;
+      </li>
+      <li class="padtop"><fa-icon [icon]="faWind"></fa-icon> {{ cityWeather.windSpeed | number:'1.0-1' }} km/h</li>
+    </ul>
+  </mat-card-content>
+</mat-card>
