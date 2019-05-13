@@ -23,7 +23,7 @@ The app uses router and resolvers. Data access and caching is structured in serv
 
 The app is complete of unit and e2e tests. It uses Webpack's proxy to proxy calls to OpenWeatherMap to avoid the CORS restriction issue.
 
-Libraries used: Angular 7, Angula Material, Fontawesome.
+Libraries used: Angular 7, Angular Material.
 
 ## Development server
 
